@@ -11,6 +11,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import static com.mgryshenko.Kidmod.NAMESPACE;
+import static com.mgryshenko.blocks.KidBlocks.DEMO_BLOCK;
+import static com.mgryshenko.blocks.KidBlocks.DEMO_PILLAR_BLOCK;
 import static com.mgryshenko.items.KidItems.DEMO_ITEM;
 
 public class KidItemGroups {
@@ -22,9 +24,11 @@ public class KidItemGroups {
     public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
             .icon(() -> new ItemStack(DEMO_ITEM))
             .displayName(Text.translatable("item.kidmod.item_group.name"))
-            .entries(((displayContext, entries) ->
-                    entries.add(DEMO_ITEM))
-            )
+            .entries((displayContext, entries) -> {
+                    entries.add(DEMO_ITEM);
+                    entries.add(DEMO_BLOCK.asItem());
+                    entries.add(DEMO_PILLAR_BLOCK.asItem());
+            })
             .build();
 
     public static void registerAll() {

@@ -1,5 +1,9 @@
 {
-  "item.kidmod.demo_item": "Демо Річ",
   "item.kidmod.item_group.name": "Фуууу",
-  "item.kidmod.demo_item.tooltip": "Вражає блискавкою мобів"
+  "item.kidmod.demo_item": "Демо Річ",
+  "item.kidmod.demo_item.tooltip": "Вражає блискавкою мобів",
+  "block.kidmod.demo_block": "Смердючий блок",
+  "block.kidmod.demo_block.tooltip": "Смердючий та липкий",
+  "block.kidmod.demo_pillar_block": "Смердючий стовп",
+  "block.kidmod.demo_pillar_block.tooltip": "Смердючий та твердий"
 }

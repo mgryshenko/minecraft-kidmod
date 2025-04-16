@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "kidmod:block/demo_pillar_block_top",
+    "side": "kidmod:block/demo_pillar_block"
+  }
+}

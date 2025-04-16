@@ -1,5 +1,6 @@
 package com.mgryshenko;
 
+import com.mgryshenko.blocks.KidBlocks;
 import com.mgryshenko.items.KidItemGroups;
 import com.mgryshenko.items.KidItems;
 import net.fabricmc.api.ModInitializer;
@@ -23,6 +24,7 @@ public class Kidmod implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 
+		KidBlocks.registerAll();
 		KidItems.registerAll();
 		KidItemGroups.registerAll();
 	}

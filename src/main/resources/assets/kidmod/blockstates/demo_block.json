@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "kidmod:block/demo_block" }
+  }
+}

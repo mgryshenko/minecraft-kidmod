@@ -1,5 +1,9 @@
 {
-  "item.kidmod.demo_item": "Demo Item",
   "item.kidmod.item_group.name": "Ewwww",
-  "item.kidmod.demo_item.tooltip": "Strikes mobs with lightning"
+  "item.kidmod.demo_item": "Demo Item",
+  "item.kidmod.demo_item.tooltip": "Strikes mobs with lightning",
+  "block.kidmod.demo_block": "Stinky block",
+  "block.kidmod.demo_block.tooltip": "Stinky and sticky",
+  "block.kidmod.demo_pillar_block": "Stinky pillar",
+  "block.kidmod.demo_pillar_block.tooltip": "Stinky and hard"
 }

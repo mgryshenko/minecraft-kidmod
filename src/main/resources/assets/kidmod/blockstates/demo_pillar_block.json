@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "kidmod:block/demo_pillar_block_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "kidmod:block/demo_pillar_block"
+    },
+    "axis=z": {
+      "model": "kidmod:block/demo_pillar_block_horizontal",
+      "x": 90
+    }
+  }
+}

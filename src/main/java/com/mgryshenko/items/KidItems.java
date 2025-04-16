@@ -1,5 +1,6 @@
 package com.mgryshenko.items;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -16,6 +17,14 @@ public class KidItems {
     }
 
     public static void register(String path, Item item) {
-		Registry.register(Registries.ITEM, new Identifier(NAMESPACE, path), item);
+        register(new Identifier(NAMESPACE, path), item);
+    }
+
+    public static void register(Identifier identifier, Item item) {
+        Registry.register(Registries.ITEM, identifier, item);
+    }
+
+    public static void register(Identifier identifier, Block block) {
+        register(identifier, new KidBlockItem(block, new Item.Settings(), identifier.getPath()));
     }
 }
