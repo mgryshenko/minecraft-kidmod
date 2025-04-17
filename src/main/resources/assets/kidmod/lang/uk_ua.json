@@ -5,5 +5,7 @@
   "block.kidmod.demo_block": "Смердючий блок",
   "block.kidmod.demo_block.tooltip": "Смердючий та липкий",
   "block.kidmod.demo_pillar_block": "Смердючий стовп",
-  "block.kidmod.demo_pillar_block.tooltip": "Смердючий та твердий"
+  "block.kidmod.demo_pillar_block.tooltip": "Смердючий та твердий",
+  "block.kidmod.demo_lamp_block": "Смердюча лампа",
+  "block.kidmod.demo_lamp_block.tooltip": "Смердюча та яскрава"
 }

@@ -11,8 +11,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import static com.mgryshenko.Kidmod.NAMESPACE;
-import static com.mgryshenko.blocks.KidBlocks.DEMO_BLOCK;
-import static com.mgryshenko.blocks.KidBlocks.DEMO_PILLAR_BLOCK;
+import static com.mgryshenko.blocks.KidBlocks.*;
 import static com.mgryshenko.items.KidItems.DEMO_ITEM;
 
 public class KidItemGroups {
@@ -28,6 +27,7 @@ public class KidItemGroups {
                     entries.add(DEMO_ITEM);
                     entries.add(DEMO_BLOCK.asItem());
                     entries.add(DEMO_PILLAR_BLOCK.asItem());
+                    entries.add(DEMO_LAMP_BLOCK.asItem());
             })
             .build();
 

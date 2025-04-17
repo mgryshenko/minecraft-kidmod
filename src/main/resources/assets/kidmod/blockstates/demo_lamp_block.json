@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "activated=false": {
+      "model": "kidmod:block/demo_lamp_block"
+    },
+    "activated=true": {
+      "model": "kidmod:block/demo_lamp_block_on"
+    }
+  }
+}

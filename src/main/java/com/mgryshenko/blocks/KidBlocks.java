@@ -23,10 +23,16 @@ public class KidBlocks {
             .copy(OAK_LOG)
             .sounds(BlockSoundGroup.WOOD)
     );
+    public static final Block DEMO_LAMP_BLOCK = new KidLampBlock(AbstractBlock.Settings
+            .create()
+            .sounds(BlockSoundGroup.LANTERN)
+            .luminance(KidLampBlock::getLuminance)
+    );
 
     public static void registerAll() {
         register(DEMO_BLOCK, "demo_block");
         register(DEMO_PILLAR_BLOCK, "demo_pillar_block");
+        register(DEMO_LAMP_BLOCK, "demo_lamp_block");
     }
 
     public static void register(Block block, String path) {
