@@ -15,8 +15,11 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import static com.mgryshenko.Kidmod.NAMESPACE;
-import static com.mgryshenko.blocks.KidBlocks.*;
-import static com.mgryshenko.items.KidItems.DEMO_ITEM;
+import static com.mgryshenko.blocks.KidBlocks.DEMO_BLOCK;
+import static com.mgryshenko.blocks.KidBlocks.DEMO_LAMP_BLOCK;
+import static com.mgryshenko.blocks.KidBlocks.DEMO_PILLAR_BLOCK;
+import static com.mgryshenko.items.KidItems.LIGHTNING_STAFF;
+import static com.mgryshenko.items.KidItems.STINKY_ITEM;
 
 public class KidItemGroups {
 
@@ -26,14 +29,15 @@ public class KidItemGroups {
     );
 
     public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(DEMO_ITEM))
+            .icon(() -> new ItemStack(STINKY_ITEM))
             .displayName(Text.translatable("item.kidmod.item_group.name"))
             .entries((displayContext, entries) -> {
                     entries.add(DEMO_BLOCK.asItem());
                     entries.add(DEMO_PILLAR_BLOCK.asItem());
                     entries.add(DEMO_LAMP_BLOCK.asItem());
-                    entries.add(DEMO_ITEM);
-                    entries.add(potionItemStack(KidPotions.DEMO_POTION));
+                    entries.add(STINKY_ITEM);
+                    entries.add(LIGHTNING_STAFF);
+                    entries.add(potionItemStack(KidPotions.STINKY_POTION));
             })
             .build();
 

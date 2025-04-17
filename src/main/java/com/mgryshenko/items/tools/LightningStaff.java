@@ -1,18 +1,20 @@
-package com.mgryshenko.items;
+package com.mgryshenko.items.tools;
 
+import com.mgryshenko.items.materials.KidMaterials;
+import com.mgryshenko.utils.Tooltips;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -22,14 +24,18 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Objects;
 
-public class DemoItem extends Item {
+public class LightningStaff extends SwordItem {
 
-    public DemoItem() {
-        this(new FabricItemSettings());
+    public LightningStaff() {
+        this(KidMaterials.LIGHTNING_MATERIAL,
+                2,
+                0.5F,
+                new FabricItemSettings()
+        );
     }
 
-    public DemoItem(Settings settings) {
-        super(settings);
+    public LightningStaff(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+        super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
     @Override
@@ -55,7 +61,6 @@ public class DemoItem extends Item {
         if (entity.getWorld().isClient) {
             return ActionResult.PASS;
         }
-        playUseSound(user);
 
         BlockPos entityPos = entity.getBlockPos();
 
@@ -71,10 +76,10 @@ public class DemoItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.kidmod.demo_item.tooltip").formatted(Formatting.GOLD));
+        tooltip.add(Tooltips.itemTooltip("lightning_staff"));
     }
 
     private void playUseSound(PlayerEntity user) {
-        user.playSound(SoundEvents.BLOCK_AMETHYST_BLOCK_BREAK, 1.0F, 1.0F);
+        user.playSound(SoundEvents.BLOCK_SLIME_BLOCK_HIT, 1.0F, 1.0F);
     }
 }

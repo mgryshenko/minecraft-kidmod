@@ -8,13 +8,13 @@ import static com.mgryshenko.Kidmod.NAMESPACE;
 
 public class KidEffects {
 
-    public static final DemoEffect DEMO_EFFECT = new DemoEffect();
+    public static final StinkyEffect STINKY_EFFECT = new StinkyEffect();
 
     public static void registerAll() {
-        register("demo_effect", DEMO_EFFECT);
+        register("stinky_effect", STINKY_EFFECT);
     }
 
-    public static void register(String path, DemoEffect effect) {
+    public static void register(String path, StinkyEffect effect) {
         Registry.register(Registries.STATUS_EFFECT, new Identifier(NAMESPACE, path), effect);
     }
 }

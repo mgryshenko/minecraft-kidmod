@@ -5,13 +5,13 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.player.PlayerEntity;
 
-public class DemoEffect extends StatusEffect {
+public class StinkyEffect extends StatusEffect {
 
-    protected DemoEffect() {
+    protected StinkyEffect() {
         this(StatusEffectCategory.BENEFICIAL, 0xFF5A3927);
     }
 
-    protected DemoEffect(StatusEffectCategory category, int color) {
+    protected StinkyEffect(StatusEffectCategory category, int color) {
         super(category, color);
     }
 

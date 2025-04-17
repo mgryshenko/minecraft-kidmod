@@ -15,14 +15,14 @@ import static com.mgryshenko.Kidmod.NAMESPACE;
 
 public class KidPotions {
 
-    public static final Potion DEMO_POTION =new Potion(new StatusEffectInstance(
-            KidEffects.DEMO_EFFECT,
+    public static final Potion STINKY_POTION =new Potion(new StatusEffectInstance(
+            KidEffects.STINKY_EFFECT,
             3600,
             0
     ));
 
     public static void registerAll() {
-        register("demo_potion", DEMO_POTION, KidItems.DEMO_ITEM);
+        register("stinky_potion", STINKY_POTION, KidItems.STINKY_ITEM);
     }
 
     public static void register(String path, Potion potion, Item recipeItem) {

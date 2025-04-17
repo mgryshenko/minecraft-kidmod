@@ -1,10 +1,10 @@
 package com.mgryshenko.items;
 
+import com.mgryshenko.utils.Tooltips;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PotionItem;
 import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -22,10 +22,6 @@ public class KidPotionItem extends PotionItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(Text.translatable(getTooltipId()).formatted(Formatting.GOLD));
-    }
-
-    private String getTooltipId() {
-        return "potion.kidmod." + id + ".tooltip";
+        tooltip.add(Tooltips.itemTooltip(id));
     }
 }

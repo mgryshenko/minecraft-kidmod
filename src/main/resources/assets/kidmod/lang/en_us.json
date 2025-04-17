@@ -1,14 +1,16 @@
 {
   "item.kidmod.item_group.name": "Ewwww",
-  "item.kidmod.demo_item": "Demo Item",
-  "item.kidmod.demo_item.tooltip": "Strikes mobs with lightning",
+  "item.kidmod.stinky_item": "Stinky thing",
+  "item.kidmod.stinky_item.tooltip": "Tastes like... Ewwww",
+  "item.kidmod.lightning_staff": "Lightning staff",
+  "item.kidmod.lightning_staff.tooltip": "Strikes mobs with lightning",
+  "item.kidmod.stinky_potion.effect.stinky_potion": "Potion of stench",
+  "item.kidmod.stinky_potion.tooltip": "Smell is just... Ewwww",
   "block.kidmod.demo_block": "Stinky block",
   "block.kidmod.demo_block.tooltip": "Stinky and sticky",
   "block.kidmod.demo_pillar_block": "Stinky pillar",
   "block.kidmod.demo_pillar_block.tooltip": "Stinky and hard",
   "block.kidmod.demo_lamp_block": "Stinky lamp",
   "block.kidmod.demo_lamp_block.tooltip": "Stinky and bright",
-  "potion.kidmod.demo_potion": "Potion of stench",
-  "potion.kidmod.demo_potion.tooltip": "Smell is just... Ewwww",
-  "effect.kidmod.demo_effect": "Ewwww"
+  "effect.kidmod.stinky_effect": "Ewwww"
 }
