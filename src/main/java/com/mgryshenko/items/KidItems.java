@@ -1,5 +1,6 @@
 package com.mgryshenko.items;
 
+import com.mgryshenko.items.potions.KidPotions;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -13,6 +14,7 @@ public class KidItems {
     public static final Item DEMO_ITEM = new DemoItem();
 
     public static void registerAll() {
+        KidPotions.registerAll();
         register("demo_item", DEMO_ITEM);
     }
 
@@ -24,7 +26,11 @@ public class KidItems {
         Registry.register(Registries.ITEM, identifier, item);
     }
 
-    public static void register(Identifier identifier, Block block) {
+    public static void registerBlockItem(Identifier identifier, Block block) {
         register(identifier, new KidBlockItem(block, new Item.Settings(), identifier.getPath()));
+    }
+
+    public static void registerPotionItem(Identifier identifier) {
+        register(identifier, new KidPotionItem(new Item.Settings(), identifier.getPath()));
     }
 }

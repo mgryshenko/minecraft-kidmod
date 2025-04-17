@@ -40,7 +40,7 @@ public class KidBlocks {
         Identifier id = new Identifier(NAMESPACE, path);
 
         Registry.register(Registries.BLOCK, id, block);
-        KidItems.register(id, block);
+        KidItems.registerBlockItem(id, block);
     }
 
 }

@@ -8,5 +8,7 @@
   "block.kidmod.demo_pillar_block.tooltip": "Stinky and hard",
   "block.kidmod.demo_lamp_block": "Stinky lamp",
   "block.kidmod.demo_lamp_block.tooltip": "Stinky and bright",
+  "potion.kidmod.demo_potion": "Potion of stench",
+  "potion.kidmod.demo_potion.tooltip": "Smell is just... Ewwww",
   "effect.kidmod.demo_effect": "Ewwww"
 }
