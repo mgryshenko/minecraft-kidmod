@@ -14,7 +14,6 @@ public class KidmodClient implements ClientModInitializer {
 
 	private void registerParticles() {
 		// For this example, we will use the end rod particle behaviour.
-		//TODO: search for behavior other than EndRodParticle
 		ParticleFactoryRegistry.getInstance().register(KidParticles.FLY_PARTICLE, EndRodParticle.Factory::new);
 	}
 }

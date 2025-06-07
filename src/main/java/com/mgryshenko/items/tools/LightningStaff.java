@@ -29,8 +29,6 @@ import java.util.Objects;
 
 public class LightningStaff extends SwordItem {
 
-    public static final Logger LOGGER = LoggerFactory.getLogger("kidmod");
-
     public LightningStaff() {
         this(KidMaterials.LIGHTNING_MATERIAL,
                 2,
