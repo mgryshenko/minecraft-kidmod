@@ -4,6 +4,7 @@ import com.mgryshenko.blocks.KidBlocks;
 import com.mgryshenko.effects.KidEffects;
 import com.mgryshenko.items.KidItemGroups;
 import com.mgryshenko.items.KidItems;
+import com.mgryshenko.particles.KidParticles;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -25,6 +26,7 @@ public class Kidmod implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 
+		KidParticles.registerAll();
 		KidBlocks.registerAll();
 		KidItems.registerAll();
 		KidItemGroups.registerAll();

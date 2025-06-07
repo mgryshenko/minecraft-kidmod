@@ -1,6 +1,7 @@
 package com.mgryshenko.items.tools;
 
 import com.mgryshenko.items.materials.KidMaterials;
+import com.mgryshenko.particles.KidParticles;
 import com.mgryshenko.utils.Tooltips;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
@@ -20,11 +21,15 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Objects;
 
 public class LightningStaff extends SwordItem {
+
+    public static final Logger LOGGER = LoggerFactory.getLogger("kidmod");
 
     public LightningStaff() {
         this(KidMaterials.LIGHTNING_MATERIAL,
@@ -47,9 +52,22 @@ public class LightningStaff extends SwordItem {
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         PlayerEntity user = context.getPlayer();
-        if (Objects.nonNull(user)) {
-            playUseSound(user);
+        if (Objects.isNull(user)) {
+            return super.useOnBlock(context);
         }
+        
+        playUseSound(user);
+
+        BlockPos blockPos = context.getBlockPos();
+        user.getWorld().addParticle(
+                KidParticles.FLY_PARTICLE,
+                blockPos.getX() + 0.5,
+                blockPos.getY() + 1.5,
+                blockPos.getZ() + 0.5,
+                0.0,
+                0.0,
+                0.0
+        );
 
         return ActionResult.PASS;
     }
