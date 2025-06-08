@@ -2,6 +2,7 @@ package com.mgryshenko;
 
 import com.mgryshenko.blocks.KidBlocks;
 import com.mgryshenko.effects.KidEffects;
+import com.mgryshenko.entities.KidEntities;
 import com.mgryshenko.items.KidItemGroups;
 import com.mgryshenko.items.KidItems;
 import com.mgryshenko.particles.KidParticles;
@@ -31,5 +32,6 @@ public class Kidmod implements ModInitializer {
 		KidItems.registerAll();
 		KidItemGroups.registerAll();
 		KidEffects.registerAll();
+		KidEntities.registerAll();
 	}
 }

@@ -18,6 +18,7 @@ import static com.mgryshenko.Kidmod.NAMESPACE;
 import static com.mgryshenko.blocks.KidBlocks.DEMO_BLOCK;
 import static com.mgryshenko.blocks.KidBlocks.DEMO_LAMP_BLOCK;
 import static com.mgryshenko.blocks.KidBlocks.DEMO_PILLAR_BLOCK;
+import static com.mgryshenko.items.KidItems.CUBE_SPAWN_EGG;
 import static com.mgryshenko.items.KidItems.LIGHTNING_STAFF;
 import static com.mgryshenko.items.KidItems.STINKY_ITEM;
 
@@ -37,6 +38,7 @@ public class KidItemGroups {
                     entries.add(DEMO_LAMP_BLOCK.asItem());
                     entries.add(STINKY_ITEM);
                     entries.add(LIGHTNING_STAFF);
+                    entries.add(CUBE_SPAWN_EGG);
                     entries.add(potionItemStack(KidPotions.STINKY_POTION));
             })
             .build();

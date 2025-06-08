@@ -1,5 +1,6 @@
 package com.mgryshenko.items;
 
+import com.mgryshenko.items.eggs.CubeSpawnEgg;
 import com.mgryshenko.items.food.StinkyItem;
 import com.mgryshenko.items.potions.KidPotions;
 import com.mgryshenko.items.tools.LightningStaff;
@@ -15,11 +16,13 @@ public class KidItems {
 
     public static final Item STINKY_ITEM = new StinkyItem();
     public static final Item LIGHTNING_STAFF = new LightningStaff();
+    public static final Item CUBE_SPAWN_EGG = new CubeSpawnEgg();
 
     public static void registerAll() {
         KidPotions.registerAll();
         register("stinky_item", STINKY_ITEM);
         register("lightning_staff", LIGHTNING_STAFF);
+        register("cube_spawn_egg", CUBE_SPAWN_EGG);
     }
 
     public static void registerBlockItem(Identifier identifier, Block block) {
